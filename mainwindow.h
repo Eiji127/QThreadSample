@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtGui>
+#include <QGraphicsScene>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,9 +21,9 @@ private slots:
     void on_pushButton_clicked();
 
 private:
-    QString numStr;
-    int a;
     Ui::MainWindow *ui;
+    QGraphicsScene * scene = new QGraphicsScene();
     void configureGraphicView();
+    void plotCoordinate(int a, int b);
 };
 #endif // MAINWINDOW_H
