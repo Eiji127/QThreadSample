@@ -18,12 +18,17 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_startPlotButton_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_stopPlotButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     QGraphicsScene * scene = new QGraphicsScene();
+    int maxLoopCount;
     void configureGraphicView();
-    void plotCoordinate(int a, int b);
+    void plotCoordinate(double a, double b, double t);
 };
 #endif // MAINWINDOW_H
